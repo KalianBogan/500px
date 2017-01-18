@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>500px</title>
+    <style>
+      html, body{
+        margin: 0;
+      }
+      .app {
+        position: relative;
+        padding: 20px 15px 25px;
+      }
+      .thumbs ul{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        -ms-align-items: flex-start;
+        align-items: flex-start;
+        list-style-type: none;
+        max-width: 880px;
+        padding: 0;
+        margin: auto;
+        
+      }
+      .thumbs ul li{
+        max-width: 160px;
+        padding: 10px;
+        margin: 0 20px 20px 0;
+        border: 1px solid #ccc;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        cursor: pointer;
+        -webkit-transition: box-shadow 0.4s;
+        -o-transition: box-shadow 0.4s;
+        transition: box-shadow 0.4s;
+      }
+      .thumbs ul li:nth-child(5n){
+        margin-right: 0;
+      }
+      .thumbs ul li:hover{
+        box-shadow: 0 2px 8px 0 rgba(0,0,0,.25)
+      }
+      .thumbs img{
+        display: block;
+      }
+      .thumbs__name{
+        margin-top: 5px;
+        display: block;
+        text-align: center;
+        color: #000;
+        font-family: sans-serif;
+      }
+      .thumbs__author{
+        display: block;
+        margin-top: 5px;
+        color: #666;
+        font-style: italic;
+        font-family: sans-serif;
+        font-size: 12px;
+      }
+      .thumbs__name,
+      .thumbs__author{
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+      }
+      .largeImg{
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.75);
+        cursor: pointer;
+      }
+      .largeImg img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: default;
+      }
+      .largeImg.visible{
+        display: block;
+      }
+      .loadMore{
+        display: block;
+        text-align: center;
+      }
+    </style>
+    
+  </head>
+  <body>
+     
+    <div id="root"></div>
+
+    <script src="js/react/react.js"></script>
+    <script src="js/react/react-dom.js"></script>
+    <script src="js/react/browser.min.js"></script>
+    <script type="text/babel" src="js/app.js"></script>
+    
+     
+  </body>
+</html>
